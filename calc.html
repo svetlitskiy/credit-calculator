@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles-calc.css">
+    </head>
+    <body>
+        <form>
+            <div>
+                <label for="amount currency">Сумма вложений
+                    <input name="amount" type="number" min="10000" max="10000000" step="1" value="100000">
+                    <select id="dropdown" name="currency">
+                        <option selected="" value="&#8381"> &#8381</option>
+                        <option value="&#36"> &#36</option>
+                        <option value="&#8364"> &#8364</option>                        
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="percents">Процентная ставка, % годовых
+                    <input name="percents" type="number" min="1.00" max="100.00" step="0.01" value="5.00">
+                </label>
+            </div>
+            <div>
+                <label for="term">Срок кредита/займа, мес.
+                    <input name="term" type="number" min="6" max="300" step="1" value="100000">
+                </label>
+            </div>
+            <div>
+                <label for="date">Дата выдачи
+                    <input name="date" type="date">
+                </label>
+            </div>
+            <div>
+                <label for="repayment">Порядок погашения
+                    <select id="dropdown" name="repayment">
+                        <option selected="" value="annuity"> Аннуитетный</option>
+                        <option value="differentiated"> Дифференцированный</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="periodicity">Периодичность погашения
+                    <select id="dropdown" name="periodicity">
+                        <option selected="" value="monthly"> Ежемесячно</option>
+                        <option value="quarterly"> Ежеквартально</option>
+                        <option value="annually"> Ежегодно</option>
+                    </select>
+                </label>
+            </div>
+
+        </form>
+    </body>
+</html>    

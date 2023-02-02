@@ -6,9 +6,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="icon" type="" href="" />
+  <script src="https://kit.fontawesome.com/4711ada8e4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-    
+<!--  -->
+<body class="viewport">
+<h1 class="title">Кредитный калькулятор</h1>
+<p class="subtitle">Позволяет легко и быстро рассчитать график платежей по интересующему вас кредиту, оценить свои возможности погасить долг без просрочек. Введите несколько параметров кредита, подберите удобные для вас условия и сравните их с предложениями разных банков.</p>
+<!-- кнопки выбора метода рассчетов -->
+<div class="radio">
+  <input class="radio__button" type="radio" name="radio" id="button-credit" value="" checked />
+  <label for="button-credit" class="radio__button-text">по сумме кредита/займа</label>
+  <input class="radio__button" type="radio" name="radio" id="button-payment" value="" checked />
+  <label for="button-payment" class="radio__button-text">по сумме платежа</label>
+</div>
+<div class="wrapper">
+  <!-- Калькулятор делает Женя -->
+  <div class="calc-container"></div>
+  <!-- контейнер с результатами расчетов-->
+  <div class="result-container">
+    <h3 class="result-container__title">Условия для вас</h3>
+    <p class="result-container__subtitle">Если условия вас не устраивают, то вы можете еще раз изменить ваши данные и подобрать лучший вариант.</p>
+    <div class="result-container__item">
+      <p class="item__text">Всего выплат</p>
+      <span class="item__block-value"><output class="item__value" name="total-payments">0</output><i class="fa-solid fa-ruble-sign"></i></span>
+    </div>
+    <div class="result-container__item">
+      <p class="item__text">Полная стоимость кредита</p>
+      <span class="item__block-value"><output class="item__value" name="total-cost ">0</output><i class="fa-percent"></i></span>
+    </div>
+    <div class="result-container__item">
+      <p class="item__text">Переплата</p>
+      <span class="item__block-value"><output class="item__value" name="overpayment">0</output><i class="fa-solid fa-ruble-sign"></i></span>
+    </div>
+    <hr class="item__separator" />
+    <button class="result-container__button" type="button">График платежей</button>
+  </div>
+</div>
 </body>
 </html>

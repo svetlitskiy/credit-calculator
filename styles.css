@@ -1,0 +1,178 @@
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/*общие характеристики*/
+* {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+/*синий фон*/
+.viewport {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: radial-gradient(138.89% 303.35% at 140% 66.21%, #1F1E33 0%, #2A224F 87.18%)
+}
+/*заголовок*/
+.title {
+    font-weight: 700;
+    font-size: clamp(28px, 7cqw, 80px);
+    color: #FFFFFF;
+    text-align: center;
+}
+/*подзаголовок*/
+.subtitle {
+    font-weight: 400;
+    font-size: clamp(14px, 2cqw, 18px);
+    line-height: 180%;
+    text-align: center;
+    color: #B6B0D3;
+    margin: 0 10%;
+}
+/*переключатель*/
+.radio {
+    display: inline-flex;
+    background: radial-gradient(118.06% 101.32% at 74.23% -1.32%, #322F58 0%, rgba(24, 21, 43, 0) 100%);
+    border: 1px solid #3F3E5E;
+    border-radius: 15px;
+    margin: 30px auto 0 auto;
+}
+.radio__button {
+    display: none;
+}
+.radio__button[type="radio"]:checked+label {
+    background-color: #FFFFFF;
+    color: #3F3E5E;
+  }
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#button-credit:checked~#content-1,
+#button-payment:checked~#content-2 {
+    display: block;
+  }
+
+.radio__button-text {
+    text-decoration: none;
+    font-weight: 400;
+    font-size: clamp(16px, 2.5cqw, 20px);
+    color: #FFFFFF;
+    padding: 15px 20px;
+    margin: 10px;
+    background-color: #2A224F;
+    border-radius: 15px;
+    cursor: pointer;
+}
+/*обертка калькулятора*/
+.wrapper {
+    display: grid;
+    grid-template-columns: 65% 30%;
+    gap: 5%;
+   
+    width: 80%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+/*контейнер калькулятор делает Женя*/
+.calc-container {
+    border: 1px dotted grey;
+    border-radius: 15px;
+}
+/*контейнер результаты*/
+.result-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: radial-gradient(118.06% 101.32% at 74.23% -1.32%, #322F58 0%, rgba(24, 21, 43, 0) 100%);
+    border: 1px solid #3F3E5E;
+    border-radius: 16px;
+}
+.result-container__title {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    padding: 20px 15px 10px 15px;
+}
+.result-container__subtitle {
+    color: #8C87A8;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    padding: 10px 15px;
+    text-align: center;
+}
+.result-container__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 110px;
+    background-color: #2A224F;
+    border-radius: 8px;
+    margin: 10px auto;
+}
+.item__text {
+    color: #8C87A8;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    padding: 5px 15px;
+}
+.item__value, .fa-ruble-sign, .fa-percent {
+    display: inline;
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    padding: 5px;
+}
+.item__separator {
+    width: 80%;
+    margin: 15px auto;
+    height: 2px;
+    border-width: 0;
+    background-color: #8C87A8;
+}
+.result-container__button {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: #2A224F;
+    border: 1px solid #322F58;
+    border-radius: 8px;
+    margin: 10px auto 20px auto;
+    box-shadow: 2px -2px 5px #322F58;
+    cursor: pointer;
+    transition-duration: 0.5s;
+}
+.result-container__button:hover {
+    background-color:#322F58
+    
+}
+
+
+/* медиазапросы и команды */
+
+@media screen and (max-width: 720px) {
+    .result-container {
+      display: none;
+    }
+    .radio {
+        flex-direction: column;
+    }
+    .wrapper {
+        display: flex;
+    }
+    .calc-container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./styles-calc.css">
+    </head>
+    <body>
+        <form id="form1">
+            <div>
+                <label for="amount currency">Сумма кредита/займа
+                    <input id="amount" type="number" min="10000" max="10000000" step="1" value="100000">
+                    <select id="currency">
+                        <option selected="" value="&#8381"> &#8381</option>
+                        <option value="&#36"> &#36</option>
+                        <option value="&#8364"> &#8364</option>                        
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="percents">Процентная ставка, % годовых
+                    <input id="percents" type="number" min="1.00" max="100.00" step="0.01" value="5.00">
+                </label>
+            </div>
+            <div>
+                <label for="term">Срок кредита/займа, мес.
+                    <input id="term" type="number" min="6" max="300" step="1" value="30">
+                </label>
+            </div>
+            <div>
+                <label for="credit-date">Дата выдачи
+                    <input id="credit-date" type="date" value="2023-02-02">
+                </label>
+            </div>
+            <div>
+                <label for="repayment">Порядок погашения
+                    <select id="repayment">
+                        <option selected="" value="annuity"> Аннуитетный</option>
+                        <option value="differentiated"> Дифференцированный</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="periodicity">Периодичность погашения
+                    <select id="periodicity">
+                        <option selected="" value="monthly"> Ежемесячно</option>
+                        <option value="quarterly"> Ежеквартально</option>
+                        <option value="annually"> Ежегодно</option>
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="one-time-commission currency">Единовременная комиссия
+                    <input id="one-time-commission" type="number" min="0" max="10000000" step="1" value="0">
+                    <select id="currency">
+                        <option selected="" value="&#8381"> &#8381</option>
+                        <option value="&#36"> &#36</option>
+                        <option value="&#8364"> &#8364</option>                        
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="monthly-commission currency">Единовременная комиссия
+                    <input id="monthly-commission" type="number" min="0" max="10000000" step="1" value="0">
+                    <select id="currency">
+                        <option selected="" value="&#8381"> &#8381</option>
+                        <option value="&#36"> &#36</option>
+                        <option value="&#8364"> &#8364</option>                        
+                    </select>
+                </label>
+            </div>
+            <div>
+                <label for="monday-payment" class="checkbox">
+                    <input id="monday-payment" type="checkbox" required="">  Переносить даты платежей на понедельник
+                </label>
+            </div>
+            <div>
+                <label for="early-payment" class="checkbox">
+                    <input id="early-payment" type="checkbox" required="">  Полное досрочное погашение
+                </label>
+                
+                <label for="date-early-payment" class="hide">Дата досрочного погашения
+                    <input id="date-early-payment" type="date">
+                </label>
+            </div>
+            <div>
+            </div>
+        </form>
+    </body>
+</html>    

@@ -76,8 +76,113 @@
 }
 /*контейнер калькулятор делает Женя*/
 .calc-container {
-    border: 1px dotted grey;
+    border: 1px solid #DDDCE0;
     border-radius: 15px;
+    background-color: #FFFFFF;
+    color: #3F3E5E;
+}
+/* .calc-container .cont {
+    border: 1px solid #dddce0;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color:#3F3E5E;
+    margin-left: 10px;
+    padding: 6px 0 6px 6px;
+
+}
+.calc-container select {
+    border: none;
+    background-color: #FFFFFF;
+    color:#3F3E5E;
+    margin-top: -3px;
+}
+#currency {
+    border-left: 1px solid #DDDCE0;
+}
+.calc-container input {
+    border: none;
+    background-color: #FFFFFF;
+    color:#3F3E5E;
+}
+.calc-container p {
+    font-size: 0.7em;
+    padding: 18px 0 9px 18px;
+} */
+.red-border {
+    border: 1px solid red;
+}
+.blue-border {
+    border: 1px solid blue;
+}
+.form1 {
+    display: flex;
+    flex-direction: column;
+}
+.row-line {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px 0;
+}
+.first-line {
+    margin: 30px 10px 0;
+}
+/* .href-line {
+    flex-direction: row;
+} */
+.row-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding: 0 20px;
+}
+.row-checkbox {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 50%;
+    padding: 0 20px;
+}
+/* .row-a {
+    flex-direction: row;
+} */
+.label-item {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #DDDCE0;
+    border-radius: 8px;
+    padding: 4px;
+}
+.label-checkbox {
+    display: flex;
+    flex-direction: row;
+}
+.datas {
+    width: 100%;
+    border: none;
+    color: #3F3E5E;
+}
+.datas-checkbox {
+    margin-right: 8px;
+}
+.currency {
+    width: 33px;
+    border: none;
+    border-left: 1px solid #DDDCE0;
+    color: #3F3E5E;
+}
+.row-item span {
+    font-size: 0.7em;
+    margin-bottom: 2px;
+}
+.row-item a {
+  font-size: 0.85em;
+  padding-top: 15px;
+}
+.row-checkbox span {
+    font-size: 0.85em;
+    align-self: center;
 }
 /*контейнер результаты*/
 .result-container {

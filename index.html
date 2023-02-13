@@ -22,7 +22,134 @@
 </div>
 <div class="wrapper">
   <!-- Калькулятор делает Женя -->
-  <div class="calc-container"></div>
+  <div class="calc-container">
+    <form class="form1">
+      <div class="row-line first-line">
+        <div class="row-item">
+            <span>Сумма кредита/займа</span>
+            <label for="amount currency" class="label-item">
+                <input id="amount" class="datas" type="number" min="10000" max="10000000" step="1" value="100000">
+                <select class="currency">
+                    <option selected="" value="&#8381"> &#8381</option>
+                    <option value="&#36"> &#36</option>
+                    <option value="&#8364"> &#8364</option>                        
+                </select>
+            </label>
+        </div>
+        <div class="row-item">
+            <span>Процентная ставка, % годовых</span>
+            <label for="percents" class="label-item">
+                <input id="percents" class="datas" type="number" min="1.00" max="100.00" step="0.01" value="5.00">
+            </label>
+        </div>
+      </div>
+      <div class="row-line">
+        <div class="row-item">
+            <span>Срок кредита/займа, мес.</span>
+            <label for="term" class="label-item">
+                <input id="term" class="datas" type="number" min="6" max="300" step="1" value="30">
+            </label>
+        </div>
+        <div class="row-item">
+            <span>Дата выдачи</span>
+            <label for="credit-date" class="label-item">
+                <input id="credit-date" class="datas" type="date" value="2023-02-02">
+            </label>
+        </div>
+      </div>
+      <div class="row-line">
+        <div class="row-item">
+          <span>Порядок погашения</span>
+          <label for="repayment" class="label-item">
+             <select id="repayment" class="datas">
+                 <option selected="" value="annuity"> Аннуитетный</option>
+                 <option value="differentiated"> Дифференцированный</option>
+             </select>
+          </label>
+        </div>
+        <div class="row-item">
+          <span>Периодичность погашения</span>
+          <label for="periodicity" class="label-item">
+              <select id="periodicity" class="datas">
+                  <option selected="" value="monthly"> Ежемесячно</option>
+                  <option value="quarterly"> Ежеквартально</option>
+                  <option value="annually"> Ежегодно</option>
+              </select>
+          </label>
+        </div>
+      </div>
+      <div class="row-line">
+        <div class="row-item">
+          <span>Единовременная комиссия</span>
+          <label for="one-time-commission currency" class="label-item">
+              <input id="one-time-commission" class="datas" type="number" min="0" max="10000000" step="1" value="0">
+              <select class="currency">
+                  <option selected="" value="&#8381"> &#8381</option>
+                  <option value="&#36"> &#36</option>
+                  <option value="&#8364"> &#8364</option>                        
+              </select>
+          </label>
+        </div>
+        <div class="row-item">
+          <span>Ежемесячная комиссия</span>
+          <label for="monthly-commission currency" class="label-item">
+              <input id="monthly-commission" class="datas" type="number" min="0" max="10000000" step="1" value="0">
+              <select class="currency">
+                  <option selected="" value="&#8381"> &#8381</option>
+                  <option value="&#36"> &#36</option>
+                  <option value="&#8364"> &#8364</option>                        
+              </select>
+          </label>
+        </div>  
+      </div>
+      <div class="row-line">
+        <div class="row-checkbox">
+          <label for="monday-payment" class="label-checkbox">
+            <input id="monday-payment" class="datas-checkbox" type="checkbox" required="">
+            <span> Переносить даты платежей на понедельник</span>
+          </label>
+        </div>
+      </div>
+      <div class="row-line">
+        <div class="row-checkbox">
+          <label for="closing-payment" class="label-checkbox">
+            <input id="closing-payment" class="datas-checkbox" type="checkbox" required="">
+            <span> Полное досрочное погашение</span>
+          </label>
+        </div>
+        <div class="row-item">
+          <span>Дата досрочного погашения</span>
+          <label for="date-closing-payment" class="label-item">
+            <input id="date-closing-payment" class="datas" type="date" value="2023-02-02">
+          </label>
+        </div>
+      </div>
+      <div class="row-line">
+        <div class="row-item">
+            <a href="">+ Добавить частичное погашение</a>
+        </div>
+      </div>
+      <div class="row-line">
+        <div class="row-item">
+            <span>Сумма частичного погашения</span>
+            <label for="partial-payment currency" class="label-item">
+                <input id="partial-payment" class="datas" type="number" min="10000" max="100000000" step="1" value="25000">
+                <select class="currency">
+                    <option selected="" value="&#8381"> &#8381</option>
+                    <option value="&#36"> &#36</option>
+                    <option value="&#8364"> &#8364</option>                        
+                </select>
+            </label>
+        </div>
+        <div class="row-item">
+            <span>Дата частичного погашения</span>
+            <label for="date-closing-payment" class="label-item">
+              <input id="date-closing-payment" class="datas" type="date" value="2023-02-03">
+            </label>
+          </div>
+      </div>
+  </form>
+  </div>
   <!-- контейнер с результатами расчетов-->
   <div class="result-container">
     <h3 class="result-container__title">Условия для вас</h3>

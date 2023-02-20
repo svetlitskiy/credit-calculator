@@ -80,6 +80,8 @@
     border-radius: 15px;
     background-color: #FFFFFF;
     color: #3F3E5E;
+    display: flex;
+    flex-direction: column;
 }
 .red-border {
     border: 1px solid red;
@@ -87,69 +89,64 @@
 .blue-border {
     border: 1px solid blue;
 }
-.form1 {
-    display: flex;
-    flex-direction: column;
-}
-.row-line {
+.calc-row {
     height: 50px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin: 20px 10px 0;
 }
-.first-line {
-    margin: 30px 10px 0;
+.calc-row:first-child {                           
+    margin-top: 30px;
 }
-.row-item {
+.calc-row:last-child {
+    margin-bottom: 30px;
+}
+.row-cell {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 50%;
     padding: 0 20px;
 }
-.row-checkbox {
-    display: flex;
+.row-cell_flex_row {
     flex-direction: row;
-    height: 100%;
-    width: 50%;
-    padding: 0 20px;
 }
-.label-item {
+.row-cell__label {
     display: flex;
     flex-direction: row;
     border: 1px solid #DDDCE0;
     border-radius: 8px;
     padding: 4px;
 }
-.label-checkbox {
-    display: flex;
-    flex-direction: row;
+.row-cell__label-checkbox {
+    border: none;
+    padding: 0;
 }
-.datas {
+.row-cell__input, .row-cell__select {
     width: 100%;
     border: none;
     color: #3F3E5E;
 }
-.datas-checkbox {
-    margin-right: 8px;
+.row-cell__input-checkbox {                
+    width: auto;
 }
 .currency {
     width: 33px;
-    border: none;
     border-left: 1px solid #DDDCE0;
-    color: #3F3E5E;
 }
-.row-item span {
+.row-cell__discription {
     font-size: 0.7em;
     margin-bottom: 2px;
 }
-.row-item a {
+.row-cell__discription-a {
   font-size: 0.85em;
   padding-top: 15px;
 }
-.row-checkbox span {
+.row-cell__discription-checkbox {
     font-size: 0.85em;
     align-self: center;
+    margin-left: 8px;
 }
 /*контейнер результаты*/
 .result-container {
@@ -246,5 +243,16 @@
     }
     .calc-container {
         width: 100%;
+    }
+    .calc-row {
+        flex-wrap: wrap;
+        height: min-content;
+        margin: 0 10px;
+
+    }
+    .row-cell {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
     }
 }

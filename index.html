@@ -22,7 +22,132 @@
 </div>
 <div class="wrapper">
   <!-- Калькулятор делает Женя -->
-  <div class="calc-container"></div>
+  <form class="calc-container">
+      <div class="calc-row">
+        <div class="row-cell">
+            <span class="row-cell__discription">Сумма кредита/займа</span>
+            <label for="amount" class="row-cell__label">
+                <input id="amount" class="row-cell__input input" type="number" min="10000" max="10000000" step="1" value="100000">
+                <select class="row-cell__select select currency">
+                    <option selected="" value="&#8381"> &#8381</option>
+                    <option value="&#36"> &#36</option>
+                    <option value="&#8364"> &#8364</option>                        
+                </select>
+            </label>
+        </div>
+        <div class="row-cell">
+            <span class="row-cell__discription">Процентная ставка, % годовых</span>
+            <label for="percents" class="row-cell__label">
+                <input id="percents" class="row-cell__input input" type="number" min="1.00" max="100.00" step="0.01" value="5.00">
+            </label>
+        </div>
+      </div>
+      <div class="calc-row">
+        <div class="row-cell">
+            <span class="row-cell__discription">Срок кредита/займа, мес.</span>
+            <label for="term" class="row-cell__label">
+                <input id="term" class="row-cell__input input" type="number" min="6" max="300" step="1" value="30">
+            </label>
+        </div>
+        <div class="row-cell">
+            <span class="row-cell__discription">Дата выдачи</span>
+            <label for="credit-date" class="row-cell__label">
+                <input id="credit-date" class="row-cell__input input" type="date" value="2023-02-02">
+            </label>
+        </div>
+      </div>
+      <div class="calc-row">
+        <div class="row-cell">
+          <span class="row-cell__discription">Порядок погашения</span>
+          <label for="repayment" class="row-cell__label">
+             <select id="repayment" class="row-cell__select select">
+                 <option selected="" value="annuity"> Аннуитетный</option>
+                 <option value="differentiated"> Дифференцированный</option>
+             </select>
+          </label>
+        </div>
+        <div class="row-cell">
+          <span class="row-cell__discription">Периодичность погашения</span>
+          <label for="periodicity" class="row-cell__label">
+              <select id="periodicity" class="row-cell__select select">
+                  <option selected="" value="monthly"> Ежемесячно</option>
+                  <option value="quarterly"> Ежеквартально</option>
+                  <option value="annually"> Ежегодно</option>
+              </select>
+          </label>
+        </div>
+      </div>
+      <div class="calc-row">
+        <div class="row-cell">
+          <span class="row-cell__discription">Единовременная комиссия</span>
+          <label for="one-time-commission currency" class="row-cell__label">
+              <input id="one-time-commission" class="row-cell__input input" type="number" min="0" max="10000000" step="1" value="0">
+              <select class="row-cell__select select currency">
+                  <option selected="" value="&#8381"> &#8381</option>
+                  <option value="&#36"> &#36</option>
+                  <option value="&#8364"> &#8364</option>                        
+              </select>
+          </label>
+        </div>
+        <div class="row-cell">
+          <span class="row-cell__discription">Ежемесячная комиссия</span>
+          <label for="monthly-commission currency" class="row-cell__label">
+              <input id="monthly-commission" class="row-cell__input input" type="number" min="0" max="10000000" step="1" value="0">
+              <select class="row-cell__select select currency">
+                  <option selected="" value="&#8381"> &#8381</option>
+                  <option value="&#36"> &#36</option>
+                  <option value="&#8364"> &#8364</option>                        
+              </select>
+          </label>
+        </div>  
+      </div>
+      <div class="calc-row">
+        <div class="row-cell row-cell_flex_row">
+          <label for="monday-payment" class="row-cell__label row-cell__label-checkbox">
+            <input id="monday-payment" class="row-cell__input row-cell__input-checkbox input" type="checkbox" required="">
+            <span class="row-cell__discription-checkbox"> Переносить даты платежей на понедельник</span>
+          </label>
+        </div>
+      </div>
+      <div class="calc-row">
+        <div class="row-cell row-cell_flex_row">
+          <label for="closing-payment" class="row-cell__label row-cell__label-checkbox">
+            <input id="closing-payment" class="row-cell__input row-cell__input-checkbox input" type="checkbox" required="">
+            <span class="row-cell__discription-checkbox"> Полное досрочное погашение</span>
+          </label>
+        </div>
+        <div class="row-cell">
+          <span class="row-cell__discription">Дата досрочного погашения</span>
+          <label for="date-closing-payment" class="row-cell__label">
+            <input id="date-closing-payment" class="row-cell__input input" type="date" value="2023-02-02">
+          </label>
+        </div>
+      </div>
+      <div class="calc-row">
+        <div class="row-cell">
+            <a class="row-cell__discription-a" href="">+ Добавить частичное погашение</a>
+        </div>
+      </div>
+      <div class="calc-row">
+        <div class="row-cell">
+            <span class="row-cell__discription">Сумма частичного погашения</span>
+            <label for="partial-payment currency" class="row-cell__label">
+                <input id="partial-payment" class="row-cell__input input" type="number" min="10000" max="100000000" step="1" value="25000">
+                <select class="row-cell__select select currency">
+                    <option selected="" value="&#8381"> &#8381</option>
+                    <option value="&#36"> &#36</option>
+                    <option value="&#8364"> &#8364</option>                        
+                </select>
+            </label>
+        </div>
+        <div class="row-cell">
+            <span class="row-cell__discription">Дата частичного погашения</span>
+            <label for="date-closing-payment" class="row-cell__label">
+              <input id="date-closing-payment" class="row-cell__input input" type="date" value="2023-02-03">
+            </label>
+          </div>
+      </div>
+  </form>
   <!-- контейнер с результатами расчетов-->
   <div class="result-container">
     <h3 class="result-container__title">Условия для вас</h3>

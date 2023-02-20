@@ -76,8 +76,77 @@
 }
 /*контейнер калькулятор делает Женя*/
 .calc-container {
-    border: 1px dotted grey;
+    border: 1px solid #DDDCE0;
     border-radius: 15px;
+    background-color: #FFFFFF;
+    color: #3F3E5E;
+    display: flex;
+    flex-direction: column;
+}
+.red-border {
+    border: 1px solid red;
+}
+.blue-border {
+    border: 1px solid blue;
+}
+.calc-row {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px 10px 0;
+}
+.calc-row:first-child {                           
+    margin-top: 30px;
+}
+.calc-row:last-child {
+    margin-bottom: 30px;
+}
+.row-cell {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    padding: 0 20px;
+}
+.row-cell_flex_row {
+    flex-direction: row;
+}
+.row-cell__label {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #DDDCE0;
+    border-radius: 8px;
+    padding: 4px;
+}
+.row-cell__label-checkbox {
+    border: none;
+    padding: 0;
+}
+.row-cell__input, .row-cell__select {
+    width: 100%;
+    border: none;
+    color: #3F3E5E;
+}
+.row-cell__input-checkbox {                
+    width: auto;
+}
+.currency {
+    width: 33px;
+    border-left: 1px solid #DDDCE0;
+}
+.row-cell__discription {
+    font-size: 0.7em;
+    margin-bottom: 2px;
+}
+.row-cell__discription-a {
+  font-size: 0.85em;
+  padding-top: 15px;
+}
+.row-cell__discription-checkbox {
+    font-size: 0.85em;
+    align-self: center;
+    margin-left: 8px;
 }
 /*контейнер результаты*/
 .result-container {
@@ -174,5 +243,16 @@
     }
     .calc-container {
         width: 100%;
+    }
+    .calc-row {
+        flex-wrap: wrap;
+        height: min-content;
+        margin: 0 10px;
+
+    }
+    .row-cell {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
     }
 }

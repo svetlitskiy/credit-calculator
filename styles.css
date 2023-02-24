@@ -135,18 +135,21 @@
     width: 33px;
     border-left: 1px solid #DDDCE0;
 }
-.row-cell__discription {
+.row-cell__description {
     font-size: 0.7em;
     margin-bottom: 2px;
 }
-.row-cell__discription-a {
+.row-cell__description-a {
   font-size: 0.85em;
   padding-top: 15px;
 }
-.row-cell__discription-checkbox {
+.row-cell__description-checkbox {
     font-size: 0.85em;
     align-self: center;
     margin-left: 8px;
+}
+.input, .select, .currency {
+    outline: none;
 }
 /*контейнер результаты*/
 .result-container {
